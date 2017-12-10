@@ -5,14 +5,25 @@
     "license": "MIT",
     "scripts": {
         "build": "webpack",
-        "start": "webpack-dev-server"
+        "start": "webpack-dev-server",
+        "test":
+            "mocha --require @babel/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
+        "test:watch": "npm run test -- --watch --watch-extensions js,jsx"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0-beta.34",
         "@babel/preset-es2015": "^7.0.0-beta.34",
         "@babel/preset-react": "^7.0.0-beta.34",
+        "@babel/register": "^7.0.0-beta.34",
         "babel-loader": "^8.0.0-beta.0",
+        "chai": "^4.1.2",
+        "chai-immutable": "^2.0.0-alpha.1",
+        "jsdom": "^11.5.1",
+        "mocha": "^4.0.1",
         "webpack": "^3.10.0",
         "webpack-dev-server": "^2.9.7"
+    },
+    "dependencies": {
+        "immutable": "^3.8.2"
     }
 }
