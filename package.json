@@ -6,8 +6,7 @@
     "scripts": {
         "build": "webpack",
         "start": "webpack-dev-server",
-        "test":
-            "mocha --require @babel/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
+        "test": "mocha --require @babel/register --require ./test/test_helper.js \"test/**/*@(.js|.jsx)\"",
         "test:watch": "npm run test -- --watch --watch-extensions js,jsx"
     },
     "devDependencies": {
@@ -20,10 +19,13 @@
         "chai-immutable": "^2.0.0-alpha.1",
         "jsdom": "^11.5.1",
         "mocha": "^4.0.1",
+        "react-hot-loader": "^3.1.3",
         "webpack": "^3.10.0",
         "webpack-dev-server": "^2.9.7"
     },
     "dependencies": {
-        "immutable": "^3.8.2"
+        "immutable": "^3.8.2",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0"
     }
 }

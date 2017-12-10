@@ -1,5 +1,16 @@
+const webpack = require("webpack");
+
 module.exports = {
-    entry: ["./src/index.js"],
+    entry: [
+        "react-hot-loader/patch",
+        // bundle the client for webpack-dev-server
+        // and connect to the provided endpoint
+        `webpack-dev-server/client?http://localhost:8080`,
+        // bundle the client for hot reloading
+        // only- means to only hot reload for successful updates
+        "webpack/hot/only-dev-server",
+        "./src/index.js",
+    ],
     output: {
         path: __dirname + "/dist",
         publicPath: "/",
@@ -7,6 +18,9 @@ module.exports = {
     },
     devServer: {
         contentBase: "./dist",
+        port: 8080,
+        hot: true,
+        inline: true,
     },
     devtool: "source-map",
     resolve: {
@@ -28,4 +42,5 @@ module.exports = {
             },
         ],
     },
+    plugins: [new webpack.HotModuleReplacementPlugin()],
 };
