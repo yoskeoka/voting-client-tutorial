@@ -56,3 +56,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# generated Output
+dist/bundle.js
+dist/bundle.js.map

@@ -1,6 +1,18 @@
 {
-  "name": "voting-client-tutorial",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+    "name": "voting-client-tutorial",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0-beta.34",
+        "@babel/preset-es2015": "^7.0.0-beta.34",
+        "@babel/preset-react": "^7.0.0-beta.34",
+        "babel-loader": "^8.0.0-beta.0",
+        "webpack": "^3.10.0",
+        "webpack-dev-server": "^2.9.7"
+    }
 }
