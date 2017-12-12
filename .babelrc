@@ -3,5 +3,10 @@
     "plugins": [
         "react-hot-loader/babel",
         "@babel/plugin-proposal-class-properties"
-    ]
+    ],
+    "env": {
+        "test": {
+            "presets": ["@babel/es2015", "@babel/react"]
+        }
+    }
 }

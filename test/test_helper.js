@@ -1,16 +1,10 @@
-import jsdom from "jsdom";
+import Enzyme from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import chai from "chai";
 import chaiImmutable from "chai-immutable";
+import chaiEnzyme from "chai-enzyme";
 
-const dom = new jsdom.JSDOM("<!doctype html><html><body></body></html>");
+Enzyme.configure({ adapter: new Adapter() });
 
-global.document = dom.window.document;
-global.window = dom.window;
-
-Object.keys(window).forEach(key => {
-    if (!(key in global)) {
-        global[key] = window[key];
-    }
-});
-
+chai.use(chaiEnzyme()); // Note the invocation at the end
 chai.use(chaiImmutable);
