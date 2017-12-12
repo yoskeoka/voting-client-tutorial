@@ -9,7 +9,7 @@ export default class Voting extends React.Component {
         return (
             <div className="voting">
                 {this.getPair().map(entry => (
-                    <button key={entry}>
+                    <button key={entry} onClick={() => this.props.vote(entry)}>
                         <h2>{entry}</h2>
                     </button>
                 ))}
