@@ -146,6 +146,17 @@
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-check-constants/-/plugin-check-constants-7.0.0-beta.34.tgz#29d2a42967087913c9140f1f35a085d95869a07e"
 
+"@babel/plugin-proposal-class-properties@^7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.0.0-beta.34.tgz#3008cbe8d48f36a0610eebf78ef64dc3029a7f87"
+  dependencies:
+    "@babel/helper-function-name" "7.0.0-beta.34"
+    "@babel/plugin-syntax-class-properties" "7.0.0-beta.34"
+
+"@babel/plugin-syntax-class-properties@7.0.0-beta.34":
+  version "7.0.0-beta.34"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-class-properties/-/plugin-syntax-class-properties-7.0.0-beta.34.tgz#d345b262622ff9500d9ad039aa0b77a94b4b8dd5"
+
 "@babel/plugin-syntax-jsx@7.0.0-beta.34":
   version "7.0.0-beta.34"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.34.tgz#15763aaa2ef2df00fb9ff6edb7b4295622e52514"

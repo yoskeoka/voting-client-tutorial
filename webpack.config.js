@@ -9,7 +9,7 @@ module.exports = {
         // bundle the client for hot reloading
         // only- means to only hot reload for successful updates
         "webpack/hot/only-dev-server",
-        "./src/index.js",
+        "./src/index.jsx",
     ],
     output: {
         path: __dirname + "/dist",
