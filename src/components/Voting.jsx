@@ -1,18 +1,17 @@
 import React from "react";
 
-export default class Voting extends React.Component {
-    getPair = () => {
-        return this.props.pair || [];
-    };
+import Winner from "./Winner";
+import Vote from "./Vote";
 
+export default class Voting extends React.Component {
     render() {
         return (
             <div className="voting">
-                {this.getPair().map(entry => (
-                    <button key={entry} onClick={() => this.props.vote(entry)}>
-                        <h2>{entry}</h2>
-                    </button>
-                ))}
+                {this.props.winner ? (
+                    <Winner winner={this.props.winner} />
+                ) : (
+                    <Vote {...this.props} />
+                )}
             </div>
         );
     }

@@ -5,6 +5,6 @@ import Voting from "./components/Voting";
 
 export default class App extends React.Component {
     render() {
-        return <Voting pair={pair} />;
+        return <Voting pair={pair} hasVoted="Trainspotting" />;
     }
 }
