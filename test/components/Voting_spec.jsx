@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { expect } from "chai";
 import sinon from "sinon";
+import { List } from "immutable";
 
 import Voting from "../../src/components/Voting";
+import { wrap } from "module";
 
 describe("Vote", () => {
     it("renders a pair of buttons", () => {
@@ -67,5 +69,34 @@ describe("Vote", () => {
         const winner = wrapper.find(".winner");
         expect(winner).to.be.ok;
         expect(winner).to.contain.text("Trainspotting");
+    });
+
+    // this test means nothing
+    it("renders as a pure component", () => {
+        const pair = ["Trainspotting", "28 Days Later"];
+        const wrapper = mount(<Voting pair={pair} />);
+
+        const button = wrapper.find("button").at(0);
+        expect(button).to.contain.text("Trainspotting");
+
+        pair[0] = "Sunshine";
+        wrapper.setProps(pair);
+        const button2 = wrapper.find("button").at(0);
+        expect(button2).to.contain.text("Sunshine");
+    });
+
+    // this test means nothing
+    it("does update DOM when prop changes", () => {
+        const pair = List.of("Trainspotting", "28 Days Later");
+        const wrapper = mount(<Voting pair={pair} />);
+
+        const button = wrapper.find("button").at(0);
+        expect(button).to.contain.text("Trainspotting");
+
+        const newPair = pair.set(0, "Sunshine");
+        wrapper.setProps({ pair: newPair });
+        // will affect.
+        const button2 = wrapper.find("button").at(0);
+        expect(button2).to.contain.text("Sunshine");
     });
 });
