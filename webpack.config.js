@@ -21,6 +21,8 @@ module.exports = {
         port: 8080,
         hot: true,
         inline: true,
+        // allow access dev server from arbitrary url
+        historyApiFallback: true,
     },
     devtool: "source-map",
     resolve: {
