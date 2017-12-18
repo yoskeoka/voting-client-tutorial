@@ -13,7 +13,7 @@ const AppVoting = () => (
 
 const AppResults = () => (
     <App>
-        <div>hello from results!</div>
+        <Results />
     </App>
 );
 
