@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import App from "./App";
-import Voting from "./components/Voting";
-import Results from "./components/Results";
+import Voting from "./containers/Voting";
+import Results from "./containers/Results";
 import NotFound from "./NotFound";
 
 const AppVoting = () => (
