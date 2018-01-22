@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import Results from "../components/Results";
+import * as actionCreators from "../action_creators";
 
 function mapStateToProps(state) {
     return {
@@ -11,4 +12,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps, actionCreators)(Results);
